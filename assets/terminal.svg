@@ -1,0 +1,80 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="860" height="316" viewBox="0 0 860 316" role="img" aria-label="vicente@dev: status --all">
+  <title>vicente@dev: status --all</title>
+  <defs>
+    <linearGradient id="neon" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#FF2A6D"/>
+      <stop offset="0.5" stop-color="#7B2CFF"/>
+      <stop offset="1" stop-color="#05D9E8"/>
+    </linearGradient>
+  </defs>
+  <style>
+    text { font-family: "Fira Code", "JetBrains Mono", Consolas, "SF Mono", Menlo, monospace; font-size: 15px; }
+    .title { fill: #8B7FB8; font-size: 13px; }
+    .p { fill: #FF2A6D; font-weight: 700; }
+    .cmd { fill: #F4F0FF; }
+    .k { fill: #05D9E8; }
+    .v { fill: #E6E1F5; }
+    .muted { fill: #8B7FB8; }
+    .ok { fill: #39FF88; font-weight: 700; }
+    .dots { stroke: #3C2A66; stroke-width: 2; stroke-dasharray: 1 6; stroke-linecap: round; }
+    .line { opacity: 0; animation: in .35s ease-out forwards; }
+    .l1 { animation-delay: .2s } .l2 { animation-delay: .6s } .l3 { animation-delay: .9s }
+    .l4 { animation-delay: 1.2s } .l5 { animation-delay: 1.5s } .l6 { animation-delay: 1.8s }
+    .l7 { animation-delay: 2.1s } .l8 { animation-delay: 2.5s }
+    .fill { transform-box: fill-box; transform-origin: left; transform: scaleX(0); animation: grow 1.4s 1.3s ease-out forwards; }
+    .cursor { animation: blink 1s steps(1) 2.5s infinite; }
+    @keyframes in { from { opacity: 0; transform: translateX(-6px) } to { opacity: 1; transform: none } }
+    @keyframes grow { to { transform: scaleX(1) } }
+    @keyframes blink { 50% { opacity: 0 } }
+    @media (prefers-reduced-motion: reduce) {
+      .line, .fill { animation: none; opacity: 1; transform: none; }
+      .cursor { animation: none; }
+    }
+  </style>
+
+  <!-- window -->
+  <rect x="1.5" y="1.5" width="857" height="313" rx="12" fill="#0D0221" stroke="url(#neon)" stroke-width="3"/>
+  <path d="M3 40 H857" stroke="#241046" stroke-width="1"/>
+  <circle cx="26" cy="21" r="6" fill="#FF2A6D"/>
+  <circle cx="46" cy="21" r="6" fill="#7B2CFF"/>
+  <circle cx="66" cy="21" r="6" fill="#05D9E8"/>
+  <text x="430" y="26" text-anchor="middle" class="title">vicente@dev: ~</text>
+
+  <!-- prompt -->
+  <g class="line l1"><text x="28" y="74"><tspan class="p">$</tspan><tspan class="cmd" dx="10">status --all</tspan></text></g>
+  <g class="line l2"><text x="28" y="104"><tspan class="p">&gt;</tspan><tspan class="k" dx="10">SYSTEM</tspan><tspan class="ok" dx="10">ONLINE</tspan></text></g>
+
+  <!-- key / value rows: keys at x=46, values at x=200 -->
+  <g class="line l3">
+    <text x="28" y="134" class="p">&gt;</text><text x="46" y="134" class="k">main</text>
+    <line x1="92" y1="130" x2="186" y2="130" class="dots"/>
+    <text x="200" y="134" class="v">TypeScript / JavaScript</text>
+  </g>
+  <g class="line l4">
+    <text x="28" y="164" class="p">&gt;</text><text x="46" y="164" class="k">loading</text>
+    <line x1="120" y1="160" x2="186" y2="160" class="dots"/>
+    <text x="200" y="164" class="v">Rust</text>
+    <rect x="252" y="152" width="200" height="14" rx="3" fill="#1B0B3A" stroke="#3C2A66"/>
+    <rect x="254" y="154" width="118" height="10" rx="2" fill="url(#neon)" class="fill"/>
+    <text x="466" y="164" class="muted">60%</text>
+  </g>
+  <g class="line l5">
+    <text x="28" y="194" class="p">&gt;</text><text x="46" y="194" class="k">exploring</text>
+    <line x1="138" y1="190" x2="186" y2="190" class="dots"/>
+    <text x="200" y="194" class="v">IA aplicada · agentes · modelos locales</text>
+  </g>
+  <g class="line l6">
+    <text x="28" y="224" class="p">&gt;</text><text x="46" y="224" class="k">infra</text>
+    <line x1="102" y1="220" x2="186" y2="220" class="dots"/>
+    <text x="200" y="224" class="v">Linux · Windows Server · M365 · SharePoint</text>
+  </g>
+  <g class="line l7">
+    <text x="28" y="254" class="p">&gt;</text><text x="46" y="254" class="k">mode</text>
+    <line x1="92" y1="250" x2="186" y2="250" class="dots"/>
+    <text x="200" y="254" class="v">simple, eficiente, mantenible</text>
+  </g>
+  <g class="line l8">
+    <text x="28" y="284" class="p">$</text>
+    <rect x="46" y="271" width="9" height="17" fill="#05D9E8" class="cursor"/>
+  </g>
+</svg>
